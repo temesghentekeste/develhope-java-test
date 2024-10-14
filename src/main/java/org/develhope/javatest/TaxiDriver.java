@@ -4,8 +4,8 @@ public class TaxiDriver extends OutsideJob {
     private String licenseNumber;
     private String vehiclePlateNumber;
 
-    public TaxiDriver(String name, String jobTitle, String locationType, boolean travelRequired, String licenseNumber, String vehiclePlateNumber) {
-        super(name, jobTitle, locationType, travelRequired);
+    public TaxiDriver(String name, String locationType, boolean travelRequired, String licenseNumber, String vehiclePlateNumber) {
+        super(name, locationType, travelRequired);
         this.licenseNumber = licenseNumber;
         this.vehiclePlateNumber = vehiclePlateNumber;
     }

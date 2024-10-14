@@ -1,33 +1,32 @@
 package org.develhope.javatest;
 
+import org.w3c.dom.ls.LSOutput;
+
+import java.util.ArrayList;
+import java.util.List;
+
 public abstract  class OfficeJob  implements Job{
-    private String name;
-    private String jobTitle;
+    private String company;
     private String officeLocation;
     private boolean remoteWorkOption;
 
-    public OfficeJob(String name, String jobTitle, String officeLocation, boolean remoteWorkOption) {
-        this.name = name;
-        this.jobTitle = jobTitle;
+    private List<Person> personList = new ArrayList<>();
+
+
+    public OfficeJob(String company, String officeLocation, boolean remoteWorkOption) {
+        this.company = company;
         this.officeLocation = officeLocation;
         this.remoteWorkOption = remoteWorkOption;
     }
 
-    public String getName() {
-        return name;
+    public String getCompany() {
+        return company;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setCompany(String company) {
+        this.company = company;
     }
 
-    public String getJobTitle() {
-        return jobTitle;
-    }
-
-    public void setJobTitle(String jobTitle) {
-        this.jobTitle = jobTitle;
-    }
 
     public String getOfficeLocation() {
         return officeLocation;
@@ -73,5 +72,33 @@ public abstract  class OfficeJob  implements Job{
     @Override
     public void firePerson() {
 
+    }
+
+    public void printAllPeople() {
+        if(personList.isEmpty()) {
+            System.out.println("There is no any person is the list.");
+            return;
+        }
+
+        System.out.println("Displaying Office Job Workers");
+        for (Person person : personList) {
+            System.out.println(person);
+        }
+
+
+    }
+
+    public void addPerson(Person person) {
+        personList.add(person);
+    }
+
+    @Override
+    public String toString() {
+        return "OfficeJob{" +
+                "name='" + company + '\'' +
+                ", officeLocation='" + officeLocation + '\'' +
+                ", remoteWorkOption=" + remoteWorkOption +
+                ", personList=" + personList +
+                '}';
     }
 }

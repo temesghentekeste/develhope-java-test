@@ -4,8 +4,8 @@ public class SoftwareEngineer extends OfficeJob{
     private String company;
     private int yearsOfExperience;
 
-    public SoftwareEngineer(String name, String jobTitle, String officeLocation, boolean remoteWorkOption, String company, int yearsOfExperience) {
-        super(name, jobTitle, officeLocation, remoteWorkOption);
+    public SoftwareEngineer(String officeLocation, boolean remoteWorkOption, String company, int yearsOfExperience) {
+        super(company, officeLocation, remoteWorkOption);
         this.company = company;
         this.yearsOfExperience = yearsOfExperience;
     }
