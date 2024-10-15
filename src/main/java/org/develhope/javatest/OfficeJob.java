@@ -65,7 +65,19 @@ public abstract  class OfficeJob  implements Job{
     }
 
     @Override
-    public void hirePerson() {
+    public void hirePerson(Person person) {
+        if(!personList.isEmpty()) {
+            for (Person person1 : personList) {
+                if(person1.equals(person)) {
+                    person1.setHired(true);
+                    System.out.println(person.getFirstName()  + " is hired.");
+                    return;
+                }
+
+            }
+        } else {
+            System.out.println("There are no any people applying for the job.");
+        }
 
     }
 

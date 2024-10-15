@@ -8,7 +8,7 @@ implement necessarry functions from interface and create required fields
 Create OutsideJob abstract class implement Job
 implement necessarry functions from interface and create required fields
 
-Create Person class without inheriting anything and have basic peson information(then you will store person list in the abstract classes)
+Create Person class without inheriting anything and have basic person information(then you will store person list in the abstract classes)
 
 
 Create SoftwareEngineer extends OfficeJob

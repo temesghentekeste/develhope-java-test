@@ -11,7 +11,7 @@ firePerson functions.
     void endShift();
     void printJobDescription();
     void printWorkers();
-    void hirePerson();
+    void hirePerson(Person person);
     void firePerson();
 
 

@@ -25,12 +25,16 @@ public class Main {
 
 
         if( softwareEngineer instanceof  SoftwareEngineer ) {
+
+
             ((SoftwareEngineer) softwareEngineer).addPerson(person1);
             ((SoftwareEngineer) softwareEngineer).addPerson(person2);
             ((SoftwareEngineer) softwareEngineer).addPerson(person3);
             ((SoftwareEngineer) softwareEngineer).addPerson(person4);
             ((SoftwareEngineer) softwareEngineer).addPerson(person5);
 
+            System.out.println(person1);
+            softwareEngineer.hirePerson(person1);
             ((SoftwareEngineer) softwareEngineer).printAllPeople();
         }
 
@@ -46,6 +50,7 @@ public class Main {
 
            ((TaxiDriver) taxiDriver).printAllPeople();
        }
+
 
 
     }

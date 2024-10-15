@@ -74,13 +74,14 @@ public abstract class OutsideJob implements Job{
     }
 
     @Override
-    public void hirePerson() {
+    public void hirePerson(Person person) {
         System.out.println("hired");
 
     }
 
     @Override
     public void firePerson() {
+        System.out.println("Fire person");
 
     }
 
